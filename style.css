@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('./assets/fonts/BradfordMonoLL-Regular.otf') format('otf'),
+          url('./assets/fonts/BradfordMonoLL-Regular.woff2') format('woff2');
+  }
+
+@font-face {
+font-family: 'MyWebFont2';
+src:  url('./assets/fonts/druk/DrukWide-Medium.otf') format('otf'),
+        url('./assets/fonts/druk/DrukWide-Medium.woff') format('woff');
+}
+
+body{
+    width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.headband{
+    background-color: #5F13FF;
+    color: #ffffff;
+    margin: 0;
+}
+
+.headband > h2 {
+    font-family: "MyWebFont";
+    font-size: 35px;
+    text-align: center;
+    margin: 0;
+}
+
+.title > h1 {
+    font-family: "MyWebFont2";
+    text-align: center;
+    color: #5F13FF;
+    font-size: 210px;
+    margin: 0;
+}
+
+/* LYRICS */
+
+.lyrics{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.accordion, .trigger{
+    font-family: "MyWebFont";
+    font-size: 35px;
+}
+
+.accordion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:transparent;
+    color: #AAA5A5;
+    width: 100%;
+    margin: 0;
+}
+.accordion > .trigger{
+    border: 0;
+    background-color: transparent;
+    color: #5F13FF ;
+}
+
+button:hover{
+    font-size: 125%;
+    transition: 1s;
+    cursor: pointer;
+}
+  
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    background-color: #E5E5E5;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.panel > .row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.row > .band {
+    background-color: #5F13FF;
+}
+
+.first {
+    margin: 0 2vw;
+    padding: 0vh 0;
+}
+
+.panel > .row >  p {
+    background-color: transparent;
+    font-family: "MyWebFont";
+    color: #5F13FF;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+}
+
+button > img {
+    height: 20px;
+    width: 20px;
+}
