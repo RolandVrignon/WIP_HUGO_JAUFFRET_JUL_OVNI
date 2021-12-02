@@ -17,11 +17,8 @@ body{
 }
 
 @keyframes fadeout {
-    50%{
+    70%{
         opacity: 1;
-    }
-    75%{
-        opacity: 0.1;
     }
     100%{
         opacity: 0;
@@ -29,13 +26,17 @@ body{
 }
 
 @keyframes slideInFromLeft {
-    0% {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
         transform: translateX(-100%);
     }
-    33%{
+    66%{
         transform: translateX(0);
     }
-    66%{
+    84%{
         transform: translateX(-50%);
     }
     100% {
@@ -44,18 +45,22 @@ body{
 }
 
 @keyframes slideInFromRight {
-0% {
-    transform: translateX(100%);
-}
-33%{
-    transform: translateX(0);
-}
-66%{
-    transform: translateX(50%);
-}
-100% {
-    transform: translateX(0);
-}
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+    66%{
+        transform: translateX(0);
+    }
+    84%{
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .overlay{
@@ -67,7 +72,7 @@ body{
     height: 100vh;
     background-color: white;
     z-index:2;
-    animation: 1s linear fadeout;
+    animation: 2s linear fadeout;
 }
 
 .hand{
@@ -78,11 +83,11 @@ body{
 
 
 .right{
-    animation: 0.5s cubic-bezier(0.75, 0.23, 0.34, 1.01) 0s 1 slideInFromRight;
+    animation: 0.75s cubic-bezier(0.75, 0.23, 0.34, 1.01) 0s 1 slideInFromRight;
 }
 
 .left{
-    animation: 0.5s cubic-bezier(0.75, 0.23, 0.34, 1.01) 0s 1 slideInFromLeft;
+    animation: 0.75s cubic-bezier(0.75, 0.23, 0.34, 1.01) 0s 1 slideInFromLeft;
 }
 
 .headband{
