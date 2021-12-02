@@ -11,12 +11,24 @@ for (i = 0; i < acc.length; i++) {
   // On créee une fonction pour que au clic l'accordéon s'aggrandit : Cela revient à dire : "Si je clique sur ce boutton qu'est ce qui se passe ?"
   elem.addEventListener("click", function() {
 
-    // Si il etait actif alors il devient inactif et inversement
-    elem.parentElement.classList.toggle("active");
-
-    
+    var accordion = elem.parentElement
     var panel = elem.parentElement.nextElementSibling;
     var button = elem
+
+    if (document.getElementsByClassName("active first").length >= 1 && accordion.classList.contains("first") && document.getElementsByClassName("accordion")[0] != accordion) {
+      console.log("roland");
+      document.getElementsByClassName("accordion first active")[0].classList.remove("active")
+      document.getElementsByClassName("panel active-panel first")[0].classList.remove("active-panel")
+      accordion.classList.toggle("active");
+      panel.classList.toggle("active-panel");
+    } else {
+      accordion.classList.toggle("active");
+      panel.classList.toggle("active-panel");
+    };
+
+    console.log(accordion);
+    console.log(accordion.classList.contains("first"));
+    console.log(panel);
 
     // Fonction pour établir la largeur des bandes sur les cotés dans le panel
     var a = elem.parentElement;
@@ -47,11 +59,9 @@ for (i = 0; i < acc.length; i++) {
 
     
     // Fonction pour cacher les bouttons "+" des sous-accordeons 
-    if (panel.style.display === "flex") {
-      panel.style.display = "none";
+    if (panel.style.maxHeight > "0px") {
       button.style.display = "block"
     } else {
-      panel.style.display = "flex";
       if (!panel.classList.contains("first")){
         button.style.display = "none"
       }
@@ -65,8 +75,12 @@ for (i = 0; i < acc.length; i++) {
         let j
         for (let j = 0; j < accordions.length; j++) {
           accordions[j].classList.remove("active")
-          panels[j].style.display = "none"
-          buttons[j].style.display = "flex"
+          panels[j].classList.remove("active-panel")
+          panels[j].style.maxHeight = "0"
+          setTimeout(() => {
+            buttons[j].style.display = "flex"
+          }, 1000);
+          
         }
       }
     });

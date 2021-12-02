@@ -59,13 +59,19 @@ body{
     width: 100%;
     margin: 0;
 }
+
+.active > .trigger {
+    font-size: 125%;
+}
+
 .accordion > .trigger{
     border: 0;
     background-color: transparent;
     color: #5F13FF ;
 }
 
-button:hover{
+.trigger:hover{
+    color: red;
     font-size: 125%;
     transition: 1s;
     cursor: pointer;
@@ -74,10 +80,17 @@ button:hover{
 /* Style the accordion panel. Note: hidden by default */
 .panel {
     background-color: #E5E5E5;
-    display: none;
+    display: flex;
     flex-direction: column;
     overflow: hidden;
-    transition: 1s;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+    overflow: hidden;
+}
+
+.active-panel{
+    max-height: 100vh !important;
+    transition: max-height 1s ease-in !important;
 }
 
 .panel > .row {
