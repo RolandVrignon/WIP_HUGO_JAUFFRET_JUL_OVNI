@@ -3,7 +3,7 @@ var i;
 
 setTimeout(() => {
   document.getElementsByClassName("overlay")[0].remove();
-}, 2000)
+}, 1000)
 
 
 // Pour chaque accordéons

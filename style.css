@@ -17,7 +17,7 @@ body{
 }
 
 @keyframes fadeout {
-    25%{
+    50%{
         opacity: 1;
     }
     75%{
@@ -67,7 +67,7 @@ body{
     height: 100vh;
     background-color: white;
     z-index:2;
-    animation: 2s linear fadeout;
+    animation: 1s linear fadeout;
 }
 
 .hand{
