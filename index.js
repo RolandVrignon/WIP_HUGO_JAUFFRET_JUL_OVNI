@@ -1,6 +1,10 @@
 var acc = document.getElementsByClassName("accordion");
 var i;
 
+setTimeout(() => {
+  document.getElementsByClassName("overlay")[0].remove();
+}, 2000)
+
 
 // Pour chaque accordéons
 for (i = 0; i < acc.length; i++) {

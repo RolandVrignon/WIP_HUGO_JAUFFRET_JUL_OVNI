@@ -16,6 +16,75 @@ body{
     overflow-x: hidden;
 }
 
+@keyframes fadeout {
+    25%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    33%{
+        transform: translateX(0);
+    }
+    66%{
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+0% {
+    transform: translateX(100%);
+}
+33%{
+    transform: translateX(0);
+}
+66%{
+    transform: translateX(50%);
+}
+100% {
+    transform: translateX(0);
+}
+}
+
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index:2;
+    animation: 2s linear fadeout;
+}
+
+.hand{
+    height: 70vh;
+    width: auto;
+}
+
+
+
+.right{
+    animation: 0.5s cubic-bezier(0.75, 0.23, 0.34, 1.01) 0s 1 slideInFromRight;
+}
+
+.left{
+    animation: 0.5s cubic-bezier(0.75, 0.23, 0.34, 1.01) 0s 1 slideInFromLeft;
+}
+
 .headband{
     background-color: #5F13FF;
     color: #ffffff;
