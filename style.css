@@ -10,18 +10,22 @@ src:  url('./assets/fonts/druk/DrukWide-Medium.otf') format('otf'),
         url('./assets/fonts/druk/DrukWide-Medium.woff') format('woff');
 }
 
+h2, h1, h3{
+    font-weight: 200;
+}
+
 body{
     width: 100vw;
     margin: 0;
     overflow-x: hidden;
 }
 
-@keyframes fadeout {
-    70%{
-        opacity: 1;
+@keyframes slideInFromTop {
+    30%{
+        transform: translateY(0);
     }
     100%{
-        opacity: 0;
+        transform: translateY(200%);
     }
 }
 
@@ -72,7 +76,16 @@ body{
     height: 100vh;
     background-color: white;
     z-index:2;
-    animation: 2s linear fadeout;
+}
+
+.coloredOverlay{
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    background-color: #5F13FF;
+    z-index:3;
+    bottom: 101vh;
+    animation: 4s ease-in-out slideInFromTop;
 }
 
 .hand{
@@ -117,6 +130,8 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
 }
 
 .accordion, .trigger{
@@ -132,6 +147,7 @@ body{
     color: #AAA5A5;
     width: 100%;
     margin: 0;
+    font-weight: 200;
 }
 
 .active > .trigger {
@@ -142,11 +158,13 @@ body{
     border: 0;
     background-color: transparent;
     color: #5F13FF ;
+    transition: 1s;
+    font-weight: 200;
 }
 
 .trigger:hover{
     color: red;
-    font-size: 125%;
+    font-size: 150%;
     transition: 1s;
     cursor: pointer;
 }
@@ -178,7 +196,7 @@ body{
 }
 
 .first {
-    margin: 0 2vw;
+    margin: 0;
     padding: 0vh 0;
 }
 
