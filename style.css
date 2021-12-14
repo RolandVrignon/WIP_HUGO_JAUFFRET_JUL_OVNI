@@ -15,7 +15,7 @@ h2, h1, h3{
 }
 
 html{
-    cursor: url("./assets/img/cursor.svg") 124 124, auto !important;
+    cursor: url("./assets/img/cursor-auto.png"), auto !important;
 }
 
 body{
@@ -119,6 +119,14 @@ body{
     margin: 0;
 }
 
+.headband-bio:hover{
+    cursor: url("./assets/img/cursor-pointer.png"), auto !important;
+}
+
+.headband:hover{
+    cursor: url("./assets/img/cursor-pointer.png"), auto !important;
+}
+
 h2 {
     font-family: "MyWebFont";
     font-size: 35px;
@@ -176,7 +184,7 @@ h2 {
     color: red;
     font-size: 150%;
     transition: 1s;
-    cursor: pointer;
+    cursor: url("./assets/img/cursor-pointer.png"), auto !important;
 }
   
 /* Style the accordion panel. Note: hidden by default */
