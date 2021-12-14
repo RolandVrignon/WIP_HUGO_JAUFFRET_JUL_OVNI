@@ -111,12 +111,20 @@ body{
     background-color: #5F13FF;
     color: #ffffff;
     margin: 0;
+    position: fixed;
+    height: 5vh;
+    width: 100vw;
+    top: 0px;
 }
 
 .headband-bio{
     background-color: grey;
     color: white;
     margin: 0;
+    position: fixed;
+    height: 5vh;
+    width: 100vw;
+    top: 0px;
 }
 
 .headband-bio:hover{
@@ -148,7 +156,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 10vh;
+    margin-top: 7vh;
     margin-bottom: 20vh;
 }
 
